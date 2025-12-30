@@ -1,0 +1,64 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+venv/
+ENV/
+
+# ======================
+# IDEs e Editores
+# ======================
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# ======================
+# Logs e Relatórios
+# ======================
+*.log
+logs/
+reports/
+allure-results/
+allure-report/
+
+# ======================
+# Appium / Mobile
+# ======================
+node_modules/
+appium.log
+*.apk
+*.aab
+*.ipa
+
+# ======================
+# Android
+# ======================
+*.keystore
+*.jks
+.android/
+adbkey
+adbkey.pub
+
+# ======================
+# Sistema Operacional
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Outros
+# ======================
+coverage/
+htmlcov/
+.pytest_cache/
