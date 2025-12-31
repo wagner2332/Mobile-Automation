@@ -22,7 +22,7 @@ driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
 button_open_tiktok = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Predicted app: TikTok")
 button_open_tiktok.click()
 
-button_profile = driver.find_element(by=AppiumBy.ANDROID_UIAUTOMATOR, value="new UiSelector().className(\"android.widget.ImageView\").instance(6)")
+button_profile = driver.find_element(by=AppiumBy.ANDROID_UIAUTOMATOR, value="new UiSelector().text(\"Perfil\")")
 button_profile.click()
 
 button_close_auth = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Fechar")
@@ -34,7 +34,7 @@ button_open_menu.click()
 button_set_language = driver.find_element(by=AppiumBy.ANDROID_UIAUTOMATOR, value="new UiSelector().className(\"android.view.View\").instance(17)")
 button_set_language.click()
 
-button_select_language = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="App language, Select your default app language")
+button_select_language = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Idioma do app, Selecione seu idioma padrão para o app")
 button_select_language.click()
 
 actions = ActionChains(driver)
@@ -58,5 +58,10 @@ radio_button_languague_portugues.click()
 
 button_save_language = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Done")
 button_save_language.click()
+
+button_for_you = driver.find_element(by=AppiumBy.ANDROID_UIAUTOMATOR, value="new UiSelector().text(\"Para você\")")
+text_screen_auth = "Para você"
+
+assert button_for_you.text == text_screen_auth
 
 driver.quit()
